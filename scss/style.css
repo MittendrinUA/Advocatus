@@ -12,7 +12,39 @@ a {
   max-width: 1210px;
   padding: 0 20px;
   height: auto;
-  margin: 0 auto; }
+  margin: 0 auto;
+  position: relative; }
+  .container-bg {
+    position: absolute;
+    display: flex;
+    width: 90%;
+    height: 100vh;
+    min-height: 950px; }
+    .container-bg span {
+      display: block;
+      width: 1px;
+      height: 100%;
+      background: #F2F2F2; }
+    .container-bg span.container-bg_2 {
+      margin-left: 9.5%; }
+    .container-bg span.container-bg_3 {
+      margin-left: 17%; }
+    .container-bg span.container-bg_4 {
+      margin-left: 14.5%; }
+    .container-bg span.container-bg_5 {
+      margin-left: 9%; }
+    .container-bg span.container-bg_6 {
+      margin-left: 9.5%; }
+    .container-bg span.container-bg_7 {
+      margin-left: 17%; }
+    .container-bg span.container-bg_8 {
+      margin-left: 14.5%; }
+  .container-nmbr {
+    position: absolute;
+    top: 20vh;
+    left: 2vw;
+    font-size: 195px;
+    color: #F3F3F3; }
 
 .header {
   height: auto;
@@ -44,10 +76,12 @@ a {
     .header-nav ul {
       display: flex;
       align-items: center;
-      justify-content: space-between; }
+      justify-content: right; }
       .header-nav ul li {
         padding: 0 15px;
-        height: 100%; }
+        height: 100%;
+        box-sizing: border-box;
+        position: relative; }
         .header-nav ul li a {
           font-family: 'Open Sans', sans-serif;
           font-weight: 600;
@@ -57,9 +91,19 @@ a {
           color: #111111;
           display: inline-block;
           box-sizing: border-box; }
-      .header-nav ul li:hover {
-        border-bottom: 5px solid #E8BF5D;
-        border-top: 5px solid transparent; }
+      .header-nav ul a::after {
+        content: '';
+        position: absolute;
+        display: none;
+        z-index: 17;
+        width: 100%;
+        margin-left: -15px;
+        height: 5px;
+        bottom: 0;
+        background-color: #E8BF5D; }
+      .header-nav ul a:hover::after,
+      .header-nav ul a.active::after {
+        display: block; }
   .header-burger {
     display: none; }
   .header-burger.active span {
@@ -183,5 +227,91 @@ a {
       bottom: -58%;
       left: 50%;
       margin-left: -90px; } }
+
+.about {
+  width: 100%; }
+  .about-body {
+    height: 100vh;
+    min-height: 950px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: absolute;
+    top: 0; }
+  .about .title {
+    padding: 0 20px;
+    max-width: 765px;
+    border-left: 2px solid #E8BF5D;
+    font-family: 'Playfair Display', serif;
+    margin-bottom: 60px; }
+    .about .title h2 {
+      margin-bottom: 25px;
+      color: #111111;
+      font-weight: 400;
+      font-size: 31px; }
+    .about .title p {
+      font-size: 21px;
+      line-height: 31px;
+      color: #666666; }
+  .about-cont {
+    width: 100%;
+    display: flex;
+    color: #111111;
+    font-family: 'Playfair Display', serif; }
+    .about-cont h3 {
+      font-size: 21px;
+      font-weight: 400;
+      margin-bottom: 30px; }
+  .about-history {
+    width: 50%;
+    padding-right: 3%; }
+    .about-history ul li {
+      display: flex;
+      align-items: center;
+      margin-bottom: 45px;
+      font-family: 'Open Sans', sans-serif; }
+      .about-history ul li p.about-year {
+        font-weight: 700;
+        width: 15%;
+        margin-right: 5%;
+        letter-spacing: 1.5px; }
+      .about-history ul li p.about-descr {
+        width: 75%;
+        font-size: 16px;
+        line-height: 21px; }
+  .about-exp {
+    width: 50%; }
+    .about-exp p {
+      max-width: 460px;
+      font-family: 'Open Sans', sans-serif;
+      font-size: 14px;
+      line-height: 31px;
+      color: #666666; }
+  @media (max-width: 800px) {
+    .about .title h2 {
+      font-size: 25px; }
+    .about .title p {
+      font-size: 16px; }
+    .about-cont {
+      flex-direction: column; }
+      .about-cont h3 {
+        font-size: 18px; }
+    .about-history, .about-exp {
+      width: 100%;
+      padding: 0; }
+    .about-history p.about-year {
+      font-size: 14px; }
+    .about-history ul li p.about-descr {
+      font-size: 12px; } }
+  @media (max-width: 450px) {
+    .about .title h2 {
+      margin-bottom: 0;
+      padding: 15px 0; }
+    .about .title p {
+      display: none; }
+    .about .about-history ul li p.about-year {
+      width: 18%; }
+    .about .about-history ul li p.about-descr {
+      width: 72%; } }
 
 /*# sourceMappingURL=style.css.map */
