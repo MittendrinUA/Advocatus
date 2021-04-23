@@ -5,6 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Advocatus</title>
+    <link rel="stylesheet" type="text/css" href="/js/slick-1.8.1/slick/slick.css"/>
+    <!-- <link rel="stylesheet" type="text/css" href="/js/slick-1.8.1/slick/slick-theme.css"/> -->
     <link rel="stylesheet" href="/scss/style.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -23,14 +25,14 @@
                 <div class="header-burger">
                     <span></span>
                 </div>
-                <nav class="header-nav">
-                    <ul>
-                        <li><a href="#about">About us</a></li>
-                        <li><a href="#practis">Practice area</a></li>
-                        <li><a href="#meet">Lawyers</a></li>
-                        <li><a href="#pub">Publication</a></li>
-                        <li><a href="#ask">Faq</a></li>
-                        <li><a href="#cont">Contact</a></li>
+                <nav class="header-nav" id="header-nav">
+                    <ul class="header-nav_menu">
+                        <li><a data-id="about" href="#about">About us</a></li>
+                        <li><a data-id="practis" href="#practis">Practice area</a></li>
+                        <li><a data-id="meet" href="#meet">Lawyers</a></li>
+                        <li><a data-id="pub" href="#pub">Publication</a></li>
+                        <li><a data-id="ask" href="#ask">Faq</a></li>
+                        <li><a data-id="cont" href="#cont">Contact</a></li>
                     </ul>
                 </nav>
                 
@@ -48,7 +50,7 @@
             </div>
         </div>
     </section>
-    <section class="about" id="about">
+    <section class="about section" id="about">
         <div class="container">
             <div class="container-bg">
                 <span class="container-bg_1"></span>
@@ -91,7 +93,7 @@
             </div>
         </div>
     </section>
-    <section class="practis" id="practis">
+    <section class="practis section" id="practis">
         <div class="container">
             <div class="container-bg">
                 <span class="container-bg_1"></span>
@@ -149,7 +151,7 @@
             </div>
         </div>
     </section>
-    <section class="meet" id="meet">
+    <section class="meet section" id="meet">
         <div class="container">
             <div class="container-bg">
                 <span class="container-bg_1"></span>
@@ -217,21 +219,43 @@
                     <h2>Our Clients Say</h2>
                     <p>We are regarded as industry leaders in stunning website solutions, focused on delivering unsurpassed user experiences.</p>
                 </div>
-                <div class="fback-cont">
-                    <div class="fback-img">
-                        <img src="/img/Alon.jpg" alt="Alon Smith">
+                <div class="slider">
+                    <div class="fback-cont">
+                        <div class="fback-img">
+                            <img src="/img/Alon.jpg" alt="Alon Smith">
+                        </div>
+                        <div class="fback-text">
+                            <p class="fback-q">“</p>
+                            <p class="fback-text">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem.Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt.</p>
+                            <h3 class="fback-name"><span>Alon Smith</span><br> CEO of AVC Group</h3>
+                        </div>
                     </div>
-                    <div class="fback-text">
-                        <p class="fback-q">“</p>
-                        <p class="fback-text">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem.Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt.</p>
-                        <h3 class="fback-name"><span>Alon Smith</span><br> CEO of AVC Group</h3>
+                    <div class="fback-cont">
+                        <div class="fback-img">
+                            <img src="/img/Alon.jpg" alt="Alon Smith">
+                        </div>
+                        <div class="fback-text">
+                            <p class="fback-q">“</p>
+                            <p class="fback-text">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem.Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt.</p>
+                            <h3 class="fback-name"><span>Alon Smith</span><br> CEO of AVC Group</h3>
+                        </div>
+                    </div>
+                    <div class="fback-cont">
+                        <div class="fback-img">
+                            <img src="/img/Alon.jpg" alt="Alon Smith">
+                        </div>
+                        <div class="fback-text">
+                            <p class="fback-q">“</p>
+                            <p class="fback-text">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem.Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt.</p>
+                            <h3 class="fback-name"><span>Alon Smith</span><br> CEO of AVC Group</h3>
+                        </div>
                     </div>
                 </div>
-                <div class="fback-slider"></div>
+                
             </div>
         </div>
     </section>
-    <section class="pub" id="pub">
+    <section class="pub section" id="pub">
         <div class="container">
             <div class="container-bg">
                 <span class="container-bg_1"></span>
@@ -298,7 +322,7 @@
             </div>
         </div>
     </section>
-    <section class="ask" id="ask">
+    <section class="ask section" id="ask">
         <div class="container">
             <div class="container-bg">
                 <span class="container-bg_1"></span>
@@ -318,50 +342,61 @@
                 <div class="ask-cont">
                     <ul class="ask-ques ask-item">
                         <li>
-                            <a href="#" class="active">
+                            <a href="#" class="active ask-ques_a1">
                                 <p>What paperwork do I need to complete to file for divorce?</p>
+                                <i class="fa fa-plus" aria-hidden="true"></i>
                                 <i class="fa fa-minus" aria-hidden="true"></i>
                             </a>
                         </li>
                         <li>
-                            <a href="#">
+                            <a href="#" class="ask-ques_a2">
                                 <p>How do I change my custody and suport orders?</p>
                                 <i class="fa fa-plus" aria-hidden="true"></i>
+                                <i class="fa fa-minus" aria-hidden="true"></i>
                             </a>
                         </li>
                         <li>
-                            <a href="#">
+                            <a href="#" class="ask-ques_a3">
                                 <p>How to make a General Diary?</p>
                                 <i class="fa fa-plus" aria-hidden="true"></i>
+                                <i class="fa fa-minus" aria-hidden="true"></i>
                             </a>
                         </li>
                         <li>
-                            <a href="#">
+                            <a href="#" class="ask-ques_a4">
                                 <p>What paperwork do I need to complete to file for divorce?</p>
                                 <i class="fa fa-plus" aria-hidden="true"></i>
+                                <i class="fa fa-minus" aria-hidden="true"></i>
                             </a>
                         </li>
                         <li>
-                            <a href="#">
+                            <a href="#" class="ask-ques_a5">
                                 <p>How do I protect a business name?</p>
                                 <i class="fa fa-plus" aria-hidden="true"></i>
+                                <i class="fa fa-minus" aria-hidden="true"></i>
                             </a>
                         </li>
                         <li>
-                            <a href="#">
+                            <a href="#" class="ask-ques_a6">
                                 <p>Should I incorporate my business?</p>
                                 <i class="fa fa-plus" aria-hidden="true"></i>
+                                <i class="fa fa-minus" aria-hidden="true"></i>
                             </a>
                         </li>
                     </ul>
                     <div class="ask-text ask-item">
-                        <p>Long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.</p>
+                        <p class="active" id="ask-text_1">1Long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.</p>
+                        <p id="ask-text_2">2Long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English123.</p>
+                        <p id="ask-text_3">3Long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.</p>
+                        <p id="ask-text_4">4Long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.</p>
+                        <p id="ask-text_5">5Long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.</p>
+                        <p id="ask-text_6">6Long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-    <section class="cont" id="cont">
+    <section class="cont section" id="cont">
         <div class="container">
             <div class="container-bg">
                 <span class="container-bg_1"></span>
@@ -395,7 +430,7 @@
             </div>
         </div>
     </section>
-    <footer class="footer" id="footer">
+    <footer class="footer section" id="footer">
         <div class="container">
             <div class="footer-body">
                 <div class="footer-cr">
@@ -410,6 +445,8 @@
             </div>
         </div>
     </footer>
-    
+    <!-- <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script> -->
+    <script type="text/javascript" src="/js/slick-1.8.1/slick/slick.min.js"></script>    
 </body>
 </html>
