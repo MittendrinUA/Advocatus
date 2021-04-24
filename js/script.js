@@ -62,58 +62,10 @@ jQuery(window).scroll(function () {
 // FAQ (ЛЬоша глянь як це написати за 1 раз, а не 6 як в нас :)
 
 $(document).ready(function() {
-    $('.ask-ques_a1').click(function(event) {
+    $('.ask-ques_a').click(function(event) {
         event.preventDefault();
         $('.ask-text p').removeClass('active');
-        $('#ask-text_1').addClass('active');
-        
-    });
-});
-
-$(document).ready(function() {
-    $('.ask-ques_a2').click(function(event) {
-        event.preventDefault();
-        $('.ask-text p').removeClass('active');
-        $('#ask-text_2').addClass('active');
-    });
-
-});
-
-$(document).ready(function() {
-    $('.ask-ques_a3').click(function(event) {
-        event.preventDefault();
-        $('.ask-text p').removeClass('active');
-        $('#ask-text_3').addClass('active');
-        
-    });
-
-});
-
-$(document).ready(function() {
-    $('.ask-ques_a4').click(function(event) {
-        event.preventDefault();
-        $('.ask-text p').removeClass('active');
-        $('#ask-text_4').addClass('active');
-        
-    });
-    
-});
-
-$(document).ready(function() {
-    $('.ask-ques_a5').click(function(event) {
-        event.preventDefault();
-        $('.ask-text p').removeClass('active');
-        $('#ask-text_5').addClass('active');
-        
-    });
-});
-
-$(document).ready(function() {
-    $('.ask-ques_a6').click(function(event) {
-        event.preventDefault();
-        $('.ask-text p').removeClass('active');
-        $('#ask-text_6').addClass('active');
-        
+        $($(this).attr('href')).addClass('active');
     });
 });
 
