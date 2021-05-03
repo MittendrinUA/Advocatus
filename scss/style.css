@@ -1,4 +1,4 @@
-@import url(/css/reset.css);
+@import url(../css/reset.css);
 body {
   font-family: 'Open Sans', 'Playfair Display', sans-serif; }
 
@@ -449,7 +449,7 @@ a {
   height: 100vh;
   min-height: 950px;
   position: relative;
-  background: url(/img/FbackBg.jpg);
+  background: url(../img/FbackBg.jpg);
   background-size: cover;
   background-position: 50% 50%;
   color: #fff; }
